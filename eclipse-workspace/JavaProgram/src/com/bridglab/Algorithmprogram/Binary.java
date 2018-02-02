@@ -1,4 +1,4 @@
-package Algorithmprogram;
+package com.bridglab.Algorithmprogram;
 import com.bridglab.utility.Utillity;
 public class Binary {
 	

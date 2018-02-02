@@ -1,4 +1,4 @@
-package Algorithmprogram;
+package com.bridglab.Algorithmprogram;
 
 public class PrimeNumber {
    public static void main(String args[]) {

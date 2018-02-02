@@ -14,7 +14,7 @@ public class SearchStringb {
 			System.out.println("Enter a string want you search");
              String key = Utillity.sc.next();
              
-             System.out.println(Utillity.mBubblString(str1,key));
+             System.out.println(Utillity.mBinaryString(str1,key));
 
 }
 }

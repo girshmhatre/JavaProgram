@@ -10,14 +10,6 @@ public class Binary {
 			int j1=0;
 			int arr[] = Utillity.mBinary(n);
 			 int[] temp = new int[arr.length] ;
-			  int j =  arr.length;
-			/*  if(32-j!=0){		
-					int padding=32-j;
-					while(padding!=0){       
-						System.out.print(0);
-						padding--;
-				}
-			  }*/
 			  System.out.println("Binary no : ");
 					   for(i=arr.length-1;i>=0;i--){
 						   temp[i] = arr[i];
@@ -27,10 +19,22 @@ public class Binary {
 		 System.out.println("");
 		 int[] mArray = Utillity.mNibble(temp);
 		 System.out.println("after Swaping nibble");
-		 for(j1=0;j1<mArray.length;j1++){
+		 for(j1=mArray.length-1;j1>=0;j1--){
+			 
 		   System.out.print(mArray[j1]);
 	}
-		 System.out.print("Decimal number"+Utillity.mBinarytodec(mArray));
+		/* int count=0;
+		 int sum = 0;
+		 for(int p =mArray.length-1 ; p>=0 ; p--) {
+			  count++;
+			 if(mArray[p]==1) {
+				 sum = (int) (sum+(Math.pow(2,count)));
+			 }
+			 
+		 }*/
+		 //System.out.println(+sum);
+		 System.out.println("");
+		 System.out.println("Decimal number"+Utillity.mBinarytodec(mArray));
 
 }
 }

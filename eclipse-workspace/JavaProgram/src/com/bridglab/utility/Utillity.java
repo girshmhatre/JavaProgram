@@ -1,10 +1,12 @@
-package com.bridglab.utility;
+ package com.bridglab.utility;
 
 import java.util.Scanner;
 
 public class Utillity {
 	public static Scanner sc = new Scanner(System.in);
-// calculate prime number
+	
+				// calculate prime number
+	
 public static int[] primeNo(int num) {
 	 int count;
 	   int[] arr=new int[168];
@@ -24,7 +26,30 @@ public static int[] primeNo(int num) {
 	   
 	
 }
-//calculate the Day of Week
+					//calcularte pallindrom no
+
+public static int[] mPlindrom(int[] arr1){
+    int num=0 ,p = 0,i;
+    int array[]=arr1;
+    int rev = 0;
+    int arr2[] = new int[100];
+	   for( i= 0 ; i<array.length ; i++) {
+		num = array[i];
+		while(num>0) {
+				rev = rev*10;
+			    rev = rev+num%10;
+			    num=num/10;
+		}
+		 if(array[i]==rev) {
+			   arr2[p++]=arr1[i];
+	   }
+		
+		}
+	return arr2;
+}
+	 
+						//calculate the Day of Week
+
 public static int mDayofWeek(int y,int m,int d) {
 	int y1 = 0,m1,d1,x;
 	y1 = y - (14 - m) / 12;
@@ -34,6 +59,8 @@ public static int mDayofWeek(int y,int m,int d) {
 	return d1;
 	
 }
+	  // find the Anagram..
+
 public static String mAnagram(String strr1,String strr2) { 
 	int len1 = strr1.length();
 	int len2 = strr2.length();
@@ -61,6 +88,7 @@ public static String mAnagram(String strr1,String strr2) {
 	}
 		
 }
+			// calculate Sqrt
 
 public static double mSqrt(double t,double c,double e) {
 	t=(c/t+t)/2;
@@ -69,12 +97,15 @@ public static double mSqrt(double t,double c,double e) {
 	}
 	return t;
 }
+			//convert Celsius to Fahrenheit
 
 public static double mTempFahrToCel(double f) {
 	double c = 0; 
 	 c = (f-32)*5/9;
 	 return c;
 }
+			// convert Fahrenheit to Celsius
+
 public static double mTempCelToFahr(double c) {
 	double f = 0; 
 	 f =  (c*9/5)+32;
@@ -90,27 +121,24 @@ public static  int[]  mBinary(int num){
  
   return mBinary;
 }
-public static int[] mNibble(int []temp) {
-	int j=0;
-	int []arr2 = temp;
-	for(int i=5;i<arr2.length;i++) {
-		if(j<4) {
-		int temp2=0;
-		temp2=arr2[j];
-		arr2[j]=arr2[i];
-		arr2[i]=temp2;
-		j++;
-		}
+         //Swap the nibble
+
+public static int[] mNibble(int []arr2) {
+	int size = arr2.length;
+	int i,j,temp;
+	for(i=0,j=size/2;i<size/2;i++,j++)
+	{
+		temp = arr2[i];
+		arr2[i] = arr2[j];
+		arr2[j] = temp;
 	}
+	
+
 	return arr2;
 	
 }
-/*private static void swap(int num1, int num2) {
-	int temp=0;
-	temp=num1;
-	num1=num2;
-	num2=temp;
-}*/
+			//convert binary to decimal
+
 public static int mBinarytodec(int[]k){
 	int decimal = 0;
 	for(int i=0; i<k.length ; i++) {
@@ -121,7 +149,8 @@ public static int mBinarytodec(int[]k){
 	}
 	return decimal;
 }
-//Sort the array using Bubble sort
+			//Sort the array using Bubble sort
+
 public static int[] mBubblesort(int[]arr) {
 	for(int i=0;i<arr.length;i++) {
 	for(int j=0;j<arr.length-1;j++) {
@@ -134,7 +163,37 @@ public static int[] mBubblesort(int[]arr) {
    }
 	return arr;
   }
-//search the element using binary search
+		//sort the double array
+
+public static double[] mBubblesort1(double[]arr) {
+	for(int i=0;i<arr.length;i++) {
+	for(int j=0;j<arr.length-1;j++) {
+		if(arr[j]>arr[j+1]) {
+		arr[j] = arr[j]+arr[j+1];
+		arr[j+1]=arr[j]-arr[j+1];
+		arr[j]=arr[j]-arr[j+1];
+      }
+	}
+   }
+	return arr;
+  }
+  		// Sort the String using Bubble sort
+
+public static String[] mBubblesortString(String[]str2) {
+	for(int i=0;i<str2.length-1;i++) {
+	for(int j=0;j<str2.length-1;j++) {
+		if(str2[j].compareTo(str2[j+1])>0) {
+		String temp = str2[j];
+		str2[j] = str2[j+1];
+		str2[j+1] = temp;
+      }
+	}
+   }
+	return str2;
+  }
+
+		//search the element using binary search
+
 public static boolean mBinarySe(int []arr,int key){
 	int i;
 	int low = 0;
@@ -155,7 +214,8 @@ public static boolean mBinarySe(int []arr,int key){
 	}
 	 return false;
 }
-public static boolean mBubblString(String []str,String key){
+			// Search the String using binary search
+public static boolean mBinaryString(String []str,String key){
 	int i;
 	int low = 0;
 	int high = str.length;
@@ -178,7 +238,7 @@ public static boolean mBubblString(String []str,String key){
 	
 }
 
-public static String [] mInsert(String []string) {
+public static String []mInsert(String []string) {
 	int i,j;
 	for(j=1;j<string.length;j++)
 	{
@@ -199,7 +259,34 @@ public static String [] mInsert(String []string) {
 	
 return string;
 }
+public static int[] mInsertInt(int [] arr) {
+	
+	int i=0,j;
+	int temp=0;
+	for(i=1;i<arr.length;i++)
+	{
+		j=i;
+		temp =arr[i];
+		while(j>0 && temp<arr[j-1]) {
+			arr[j]=arr[j-1];
+			j=j-1;
+		}
+			arr[j]=temp;
+	}
+	return arr;
 }
-
+public static double getElapse(long start , long end) {
+	double elapse ;
+	
+	elapse = (end-start)*Math.pow(10,-9);
+	
+	return elapse;
+}
+public static double monthlyPayment(int loan1,int rate1, int year1) {
+	int n = 12*year1;
+	double r = rate1/(12*100);
+	return (loan1*r)/(1-(Math.pow((1+r), -n)));
+}
+}
 
 

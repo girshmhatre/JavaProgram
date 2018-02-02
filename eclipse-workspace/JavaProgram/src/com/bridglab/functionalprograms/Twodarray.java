@@ -59,7 +59,7 @@ public class Twodarray {
 					arr1[i][j] = Utillity.sc.nextDouble();
 				}
 			}
-			writer.println("Integer array is");
+			writer.println("Double array is");
 			for( i=0 ; i<m ; i++) {
 				for(j=0 ; j<n ; j++ ) {
 					double iArray = arr1[i][j];
@@ -74,7 +74,6 @@ public class Twodarray {
 			break;
 		case 3 :
 			 writer.write("boolean Array");
-			// writer.println();
 			 writer.flush();
 			 writer.write("Enter the element");
 				writer.flush();
@@ -84,7 +83,7 @@ public class Twodarray {
 					arr2[i][j] = Utillity.sc.nextBoolean();
 				}
 			}
-			writer.println("Integer array is");
+			writer.println("boolean array is");
 			for( i=0 ; i<m ; i++) {
 				for(j=0 ; j<n ; j++ ) {
 	

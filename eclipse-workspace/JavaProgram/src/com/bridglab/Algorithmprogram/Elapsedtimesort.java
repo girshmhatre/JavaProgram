@@ -48,8 +48,9 @@ public class Elapsedtimesort {
 			System.out.println("Insertion Sort for integer");
 			int []arr6 = Utillity.mInsertInt(arr);
 			for( int k= 0 ; k<arr6.length ; k++) {
-				System.out.println(arr6[k]);
+				System.out.print(" "+arr6[k]);
 			}
+			System.out.println("");
 			long end6 =  System.nanoTime();
 			double e6 =+Utillity.getElapse(start6,end6);
 			System.out.println("Require time"+e6);
@@ -61,8 +62,9 @@ public class Elapsedtimesort {
 			System.out.println("Insertion Sort for String");
 			String[]arr4 = Utillity.mInsert(str);
 			for( int k= 0 ; k<arr4.length ; k++) {
-				System.out.println(arr4[k]);
+				System.out.print(" "+arr4[k]);
 			}
+			System.out.println("");
 			long end2 =  System.nanoTime();
 			double e3 =+Utillity.getElapse(start2,end2);
 			System.out.println("Require time"+e3);
@@ -74,8 +76,9 @@ public class Elapsedtimesort {
 			System.out.println("Bubble sort for Integer");
 			int []arr5 = Utillity.mBubblesort(arr);
 			for( int k= 0 ; k<arr5.length ; k++) {
-				System.out.println(arr5[k]);
+				System.out.print(" "+arr5[k]);
 			}
+			System.out.println("");
 			long end3 = System.nanoTime();
 			double e4 =+Utillity.getElapse(start3,end3);
 			System.out.println("Require time"+e4);
@@ -87,8 +90,9 @@ public class Elapsedtimesort {
 			System.out.println("Bubble sort for String");
 			String []arr7 = Utillity.mBubblesortString(str);
 			for( int k= 0 ; k<arr7.length ; k++) {
-				System.out.println(arr7[k]);
+				System.out.print(" "+arr7[k]);
 			}
+			System.out.println("");
 			long end4 =  System.nanoTime();
 			double e5 =+Utillity.getElapse(start4,end4);
 			System.out.println("Require time"+e5);

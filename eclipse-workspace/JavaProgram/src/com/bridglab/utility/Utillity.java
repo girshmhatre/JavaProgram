@@ -220,7 +220,7 @@ public static boolean mBinaryString(String []str,String key){
 	int low = 0;
 	int high = str.length;
 	int mid = (low+high)/2;
-	for(i=0;i<str.length-1;i++) {
+	for(i=0;i<str.length;i++) {
 		int num=key.compareTo(str[mid]);
 		if(num==0) {
 			return true;
@@ -237,6 +237,7 @@ public static boolean mBinaryString(String []str,String key){
 	 return false;
 	
 }
+		//Sort String using Insertion sort
 
 public static String []mInsert(String []string) {
 	int i,j;
@@ -259,6 +260,9 @@ public static String []mInsert(String []string) {
 	
 return string;
 }
+
+	//sort element using Insertion sort
+
 public static int[] mInsertInt(int [] arr) {
 	
 	int i=0,j;
@@ -275,6 +279,7 @@ public static int[] mInsertInt(int [] arr) {
 	}
 	return arr;
 }
+		//Calculate Elapse time
 public static double getElapse(long start , long end) {
 	double elapse ;
 	
@@ -282,10 +287,19 @@ public static double getElapse(long start , long end) {
 	
 	return elapse;
 }
+		//Calculate Monthly Payment
+
 public static double monthlyPayment(int loan1,int rate1, int year1) {
 	int n = 12*year1;
 	double r = rate1/(12*100);
 	return (loan1*r)/(1-(Math.pow((1+r), -n)));
+}
+		//Sort String using MeargeSort
+
+public static String[] mMeargeSort() {
+	
+	return null;
+	
 }
 }
 

@@ -23,16 +23,7 @@ public class Binary {
 			 
 		   System.out.print(mArray[j1]);
 	}
-		/* int count=0;
-		 int sum = 0;
-		 for(int p =mArray.length-1 ; p>=0 ; p--) {
-			  count++;
-			 if(mArray[p]==1) {
-				 sum = (int) (sum+(Math.pow(2,count)));
-			 }
-			 
-		 }*/
-		 //System.out.println(+sum);
+		 
 		 System.out.println("");
 		 System.out.println("Decimal number"+Utillity.mBinarytodec(mArray));
 

@@ -15,8 +15,8 @@ public class Permutation {
 			System.out.println(str);
 		}
 		else {
+			   System.out.println("before swap"+str);
 			for(int p=i ; p<=length ; p++) {
-		    System.out.println("before swap"+str);
 		    swap(str ,i,length);
 		    System.out.println("after swap"+str);
 			permuta(str,i+1,length);

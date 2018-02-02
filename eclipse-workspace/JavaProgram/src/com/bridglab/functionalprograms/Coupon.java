@@ -6,7 +6,7 @@ public class Coupon {
 	public static int mRandom(){
 	 		
 		int   randno =  (int) (Math.random() * 100 + 1);
-		 System.out.println(" "+randno);
+		 System.out.print(" "+randno);
 		return randno;    
  
 		}
@@ -23,7 +23,7 @@ public class Coupon {
 			      no = mRandom();
 			      for(int k=0 ; k<=i ; k++) {
 				   
-			    	  if(no==arr[i]) {
+			    	  if(no==arr[k]) {
 					   break; 
 			    	  }   
 			    	  
@@ -31,7 +31,8 @@ public class Coupon {
 			      arr[i]=no;  
 				   
 		   }
-					   System.out.print("distnict");
+		   
+					   System.out.println("distnict");
 					   for(j=0;j<arr.length;j++) {
 					   System.out.print(" "+arr[j]);
 					   }				   

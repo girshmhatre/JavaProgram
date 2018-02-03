@@ -7,15 +7,19 @@ public class PrimeNumber {
 	   int num = 1000;
 	   int arr[] = Utillity.primeNo(num);
 	   for(int i=0 ; i<arr.length ; i++ ) {
-		   System.out.println(arr[i]);
+		   System.out.print(" "+arr[i]);
 	   }
-	   int arr3[] = Utillity.mPlindrom(arr);
-	   	System.out.println("Palindrom");
-	   for(int q=0 ; q<arr3.length;q++) {
-		   System.out.print(arr3[q]);
+	   System.out.println(" ");
+	   System.out.println("Palindrom");
+	   for(int i=0 ; i<arr.length ; i++ ) {
+		   if(Utillity.mPlindrom(arr[i])) {
+			   System.out.print(" "+arr[i]);
+	 }
+		   
+	   }
 	}
 	   
    }
     
- }
+
 

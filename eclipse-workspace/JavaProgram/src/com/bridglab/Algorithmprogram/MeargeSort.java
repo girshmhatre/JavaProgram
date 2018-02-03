@@ -7,26 +7,52 @@ public class MeargeSort {
 	public static void main(String args[]) {
 		System.out.println("Enter the size");
 		int num = Utillity.sc.nextInt();
-		String[]str = new String[num];
+		int[]str = new int[num];
+		int i;
 		System.out.println("Enter the String");
-		for(int i=0 ; i<str.length-1 ; i++) {
-			str[i] = Utillity.sc.next();
+		for( i=0 ; i<str.length-1 ; i++) {
+			str[i] = Utillity.sc.nextInt();
 		}
-		sort(str);
-	}
-	public static void sort(String []arr) {
-		int i,j;
-		int size = arr.length;
+	    sort(str,0,num);
+	
+	    for( i=0 ; i<num ; i++) 
+	    {
+	    	
 
-		
-		for(i=0;i<size/2;i++) {
-			System.out.print(arr[i]);
+	    	System.out.println(str[i]);
+	    }
+	}
+	private static void sort(int[] str, int lo, int hi) {
+		int n = lo-hi;
+		if(n<=1) {
+			return;
 		}
-		System.out.println("");
-		for(j=size/2;j<size;j++) {
-			System.out.print(arr[j]);
+		int mid=(hi-lo)/2;
+		sort(str,lo,mid);
+		sort(str,mid,hi); 
+		int i=lo;
+		int j=mid;
+		int[]temp = new int[hi];
+		for(int k = 0 ; k<n ; k++) {
+			if(i==mid) 
+				temp[k]=str[j++];
+			else if(j==hi)
+				temp[k]=str[i++];
+			else if(str[j]<str[i])
+				temp[k]=str[j++];
+			else
+				temp[k]=str[i++];
+
+		}
+	
+		for(int k=0 ; k<n ; k++ ) {
+			str[lo+k]=temp[k];
 		}
 		
 	}
 	
-}
+	
+		
+	}
+	
+

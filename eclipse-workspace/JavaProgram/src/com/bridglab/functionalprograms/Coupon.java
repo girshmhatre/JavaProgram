@@ -3,6 +3,12 @@ package com.bridglab.functionalprograms;
 import com.bridglab.utility.Utillity;
 
 public class Coupon {
+	 static int num;
+	 public static void main (String args[]){
+		  System.out.println("Enter the how many no u want distnict");
+		   num = Utillity.sc.nextInt();
+		   mRandInt();
+	 }
 	public static int mRandom(){
 	 		
 		int   randno =  (int) (Math.random() * 100 + 1);
@@ -10,38 +16,45 @@ public class Coupon {
 		return randno;    
  
 		}
-		 public static void main(String args[]){
-		   int num;
+			public static boolean contains(int[] arr, int item)
+	{
+		for (int n : arr)
+		{
+			if (item == n) 
+			{
+				return true;
+			}
+		}
+		return false;
+	}
+		
+		  public static void mRandInt() {
+		   int size = num*2;
 		   int count=0;
-		   System.out.println("Enter the Number");
-		   num = Utillity.sc.nextInt();
-		   int no=0;
-		   int arr[] = new int [num];
-		   int j=0;
-		   for(int i=0 ; i<num ; i++){
-			      count++;
-			      no = mRandom();
-			      for(int k=0 ; k<=i ; k++) {
-				   
-			    	  if(no==arr[k]) {
-					   break; 
-			    	  }   
-			    	  
-			      }
-			      arr[i]=no;  
-				   
-		   }
-		   
-					   System.out.println("distnict");
-					   for(j=0;j<arr.length;j++) {
+		   int i=0;
+		   int arr[] = new int [size];	
+			      
+		   for(int k=0 ; k<size ; k++) {
+			   int random = (int) mRandom();
+			     count++;
+			   if(contains(arr,random)) {
+				   break;
+			   }  
+			   else {
+				   arr[i]=random;
+			   }
+			   if(arr.length==num)
+			   {
+				   System.out.println("distnict");
+				   for(int j=0;j<arr.length;j++) {
 					   System.out.print(" "+arr[j]);
 					   }				   
+			   }
+			  
+		   }
+		   System.out.print("count"+count);		
+		 }
+	}
 	
-			   
-		 System.out.print("count"+count);
-		 }			 
-		}
-
-
 
 

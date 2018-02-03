@@ -6,31 +6,35 @@ public class Permutation {
 	public static void main(String args[]) {
 		System.out.println("enter the String");
 		String str = Utillity.sc.next();
-		
-		permuta(str,0,str.length()-1);
+		char [] arr = str.toCharArray();
+		permuta(arr,0);
 	}
 
-	private static void permuta(String str, int i, int length) {
-		if(i==length) {
+	private static void permuta(char[] str, int k) {
+		
+		if(str.length==k) {
+		for(int i=0 ; i<str.length-1; i++){
 			System.out.println(str);
+			}
+			System.out.println();
 		}
 		else {
-			   System.out.println("before swap"+str);
-			for(int p=i ; p<=length ; p++) {
-		    swap(str ,i,length);
-		    System.out.println("after swap"+str);
-			permuta(str,i+1,length);
-		}
+			
+			char temp;
+			for(int i=0 ; i<str.length-1; i++) {
+			
+			temp = str[k];
+			str[k] = str[i];
+			str[i] = temp;
+			
+			permuta(str,k+1);
+			
+			/*temp = str[k];
+			str[k] = str[i];
+			str[i] = temp;*/
 
 		}
 	}
 
-	private static String swap(String str, int j, int k) {
-		char [] arr = str.toCharArray();
-		char temp;
-		temp = arr[j];
-		arr[j] = arr[k];
-		arr[k] = temp;
-		 return String.valueOf(arr);
-	}
+}
 }

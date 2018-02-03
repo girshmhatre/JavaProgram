@@ -105,7 +105,7 @@ public class Elapsedtimesort {
 				System.out.println(+e7[j]);
 			}
 			
-			 System.out.println("elapsed time performance in dsescending order\n");
+			System.out.println("elapsed time performance in dsescending order\n");
 				for( j = e.length-1 ; j>=0 ; j--) {
 					System.out.println(+e7[j]);
 				}
